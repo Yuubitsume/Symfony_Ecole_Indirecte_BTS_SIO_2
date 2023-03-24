@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ app.user.userIdentifier }} ! {% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('html/accueil.css') }}" rel="stylesheet" /> 
+{% endblock %}
+
+{% block body %}
+    {% include "menu/navbar_index.html.twig" %}
+    {% include "menu/sidebar_index.html.twig" %}
+{% endblock %}

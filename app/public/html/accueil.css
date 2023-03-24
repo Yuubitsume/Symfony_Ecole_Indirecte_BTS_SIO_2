@@ -1,0 +1,150 @@
+body{
+  background-color: rgb(255, 255, 255);
+}
+
+button {
+  align-items: center;
+  background: linear-gradient(#0E3E85, #0F8DD0);
+  border-radius: 0px;
+  border-color: rgb(11, 77, 175);
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  padding: 19px 20px;
+  cursor: pointer;
+  width:40px;
+  border-radius: 10px;
+}
+
+@media (min-width: 700px) {
+  button {
+    font-size: 25px;
+    min-width: 160px;
+    
+  }
+}
+
+#Space {
+  padding-top:10px;
+   color: #fafcfc;
+   text-align: center;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+#title {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+#information {
+     font-size: 30px;
+     padding-left: 450px;
+     font-family: 'Times New Roman', Times, serif;
+ }
+
+#lorem {
+    border:none;
+    background: linear-gradient(#0E3E85, #0F8DD0);
+    border-width: 10px 10px 10px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px ;
+    padding:10px;
+    padding-left: 400px;
+    color: #070808;
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+#lorem2 { 
+  border:none;
+  background: linear-gradient(#0E3E85, #0F8DD0);
+  border-width: 10px 10px 10px 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px ;
+  border:none;
+  padding:10px;
+  padding-left: 400px;
+  color: #050808;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#Tabletime {
+    font-size: 20px;
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+#ProfilPicture {
+    width: 140px;
+    height: 140px;
+    text-align: center; /* Centrer l'image */
+    padding-bottom: 10px;
+    margin: auto;
+    display: flex; /* Centrer l'image */
+}
+
+#Exit {
+  position: absolute;
+  top: 5px;
+  right: 22px;
+  width: 25px;
+}
+
+#PP {
+  position: absolute;
+  top: 2px;
+  right: 145px;
+}
+
+#NameUser {
+  position: absolute;
+  top: 2px;
+  right: 32px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bar {
+  background: linear-gradient(#0E3E85, #0F8DD0);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px ;
+  padding:10px 150px 18px 40px ;
+  position: absolute;
+  top: 2px;
+  right: 60px;
+}
+
+/* The sidebar menu */
+.sidenav {
+   height: 100%; /* Full-height: remove this if you want "auto" height */
+   width: 160px; /* Set the width of the sidebar */
+   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+   top: 0; /* Stay at the top */
+   left: 0;
+   background: linear-gradient(#0E3E85, #0F8DD0);
+   padding-top: 0px;
+ }
+ 
+ /* The navigation menu links */
+ .sidenav a {
+   padding: 6px 8px 6px 16px;
+   text-decoration:none;
+   font-size: 25px;
+   color: #0e0202;
+ }
+ 
+ /* When you mouse over the navigation links, change their color 
+ .sidenav a:hover {
+   color: #fa1c1c;
+ }
+ */
+
+ /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+ @media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+ }

@@ -1,0 +1,73 @@
+.btn-color{
+    background-color: #0e1c36;
+    color: #fff;
+  }
+  
+  .profile-image-pic{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+   
+  .cardbody-color{
+    background-color: #ebf2fa;
+  }
+
+  .logo-border{
+    background-color: #0483B7;
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #0483B7;
+    border-radius: 1rem;
+    max-width: 80%;
+  }
+
+  body {
+    background: linear-gradient(#0E3E85, #0F8DD0);
+  }
+
+  .login-button{
+    background-color: #0F8FD1;
+  }
+
+  form{
+    height: 937px;
+    width: 1200px;
+    position: absolute fixed;
+  }
+
+  .login{
+    color: black;
+    font-style: italic;
+    position: absolute fixed;
+  }
+
+  .login-name{
+    color:red;
+    padding: 0px 0px 0px 25px;
+  }
+
+  a{
+    color:black ;
+    text-decoration: none;
+  }
+
+  p{
+    position: absolute;
+    right: 200px;
+    top:200px
+  }
+
+  .emailHelp{
+    text-decoration: solid;
+  }
+
+  .creaAccount{
+    text-decoration: solid;
+  }
+  
+  .loginform{
+    position: absolute;
+    right: 200px;
+    top:200px
+  }

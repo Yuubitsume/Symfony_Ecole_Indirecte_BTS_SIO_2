@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}add grade{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('html/note.css') }}" rel="stylesheet" /> 
+{% endblock %}
+
+{% block body %}
+    {% include "menu/sidebar_index.html.twig" %}
+    {% include "menu/navbar_index.html.twig" %}
+  
+<br><br><br><br>
+<div class="container">
+
+<!-- Form Name -->
+
+  {{ form_start(NoteForm) }}
+                        <h2 class="mt-3 text-center sign-up">Add a grade</h2>
+                        <form class="mt-4">
+                            <div class="row">
+                                <div class="col-lg-12 oui ">  
+                                        {{ form_row(NoteForm.user, {
+                                            'attr': {'placeholder': 'username', 'class': 'form-control'}, 
+                                         }) }}
+                                </div>
+                                <div class="col-lg-12 oui">
+                                        {{ form_row(NoteForm.matiere, {
+                                            'attr': {'placeholder': 'subject name', 'class': 'form-control'}, 
+                                         }) }}
+                                </div>
+                                <div class="col-lg-12 oui" >
+                                        {{ form_row(NoteForm.coefficient, {
+                                            'attr': {'placeholder': '', 'class': 'form-control'}, 
+                                         }) }}
+                                </div>
+                                <div class="col-lg-12 coefficient"><br>
+                                        {{ form_row(NoteForm.note, {
+                                             'attr': {'placeholder': '', 'class': 'form-control'}, 
+                                         }) }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <input type="submit" class="btn btn-block btn-dark submit" value="add">
+                                </div>
+                            </div>
+                    </div>
+      {{ form_end(NoteForm) }}
+{% endblock %}

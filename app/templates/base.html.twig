@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Home" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Welcome !{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADBklEQVR4nO2bPWgUQRTHf6eJkKAxGouAHyAKIimsFIJ2il+ICOHs0tpeeaCdla1gY5loFS21UsHvIrGyMSBaJAYtFPyIiEZzFvuW22xmd2cvs/su7PxhILn5vzf/93buzcvcBTw8PDz08AJ4pimgprk40LLgFKpxQ5HO1wN8ArQFaMMnQFuANnq0BQjUTqPK7wCfAMW1dyb8XAnUgc8EnWAL+ApcUlVUErYCk7QDj48pYEhNXcE4AcyTHHw4PgLnlDQWgn7gBrDM6mB/yYi/viw2/Qp6neIw8Abzk34NHAIOAq8SOO+Ao6WrdoAeoAn8ZnVQf4FrwCYD/4+Bv2TgdzUOANOYn+hbYFR4NaAhI+wER4Vjsp0W312LGsFRtog5gElgs3CHgfuRuYfAbpnrA66TXDOadGEDNwzcwxz4J+B8hFsHvhh48V7gJPAhwecDYFdh0eREvKmJjrvADuENArcSeNFxh3YvMAjcTuAV2jylCWxEeBMp4sYjvNPAQobf6FgQmxDj4tPEnYjwGhl+nSRgEdgvvCuG+efAPpnvI6jg/3IEH+0FbtKuG3uARwbeZZnfC3wvIwFhkBsJitETzAXqCDDbQeDx8R44Jj7DQvtT5l5GdDy28OUsAS0JFoLd8BQYkd97gasE53eS7RwwBmyRcSEjWUvis1fWGJE1w53YtNRcCmYyRMwB2w1222QuzXamYO1OkPUUxlJs6xb2TpF2F5d3sdBXlt0A8CNl7pujdZLsVqDbOqrSL0c1EnA8Ze5UaSoskPe4srWbJSh4cQxhd2GyVn3qCQhPgjrBe34AuGgZvPME5C2CcX7LMFf0eWtaJ01XEgfoviJYOnwCtAVoI++Ho6X10znRsa7K7wCfAG0B2ijzCxJ5+/xS6o3fATn5Nh2XBjrWVfkd4BOgLUAbvhN0qWI9widAW4A20mqA9j9TZMGJvsrvAFMCzmJ/QVnYJzYWyKtvHjhj47iT4G1ua10FmDWfdRu9Aqb3UadPM+tW2NVfg2u9fV6ho/I1wMPDo9r4D3PJAeKykzl1AAAAAElFTkSuQmCC">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+             <!-- Custom CSS -->
+                <link href="{{ asset('assets/extra-libs/c3/c3.min.css')}}" rel="stylesheet">
+                <link href="{{ asset('assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">
+                <link href="{{ asset('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet" />
+                <!-- Custom CSS -->
+                <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/images/favicon.png')}}">
+                <link href="{{ asset('/dist/css/style.min.css')}}" rel="stylesheet">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    
+            <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js')}}"></script>
+            <script src="{{ asset('assets/libs/popper.js/dist/umd/popper.min.js')}}"></script>
+            <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+            <!-- apps -->
+            <!-- apps -->
+            <script src="{{ asset('/dist/js/app-style-switcher.js')}}"></script>
+            <script src="{{ asset('/dist/js/feather.min.js')}}"></script>
+            <script src="{{ asset('assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}"></script>
+            <script src="{{ asset('/dist/js/sidebarmenu.js')}}"></script>
+            <!--Custom JavaScript -->
+            <script src="{{ asset('/dist/js/custom.min.js')}}"></script>
+            <!--This page JavaScript -->
+            <script src="{{ asset('assets/extra-libs/c3/d3.min.js')}}"></script>
+            <script src="{{ asset('assets/extra-libs/c3/c3.min.js')}}"></script>
+            <script src="{{ asset('assets/libs/chartist/dist/chartist.min.js')}}"></script>
+            <script src="{{ asset('assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script>
+            <script src="{{ asset('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js')}}"></script>
+            <script src="{{ asset('assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js')}}"></script>
+            <script src="{{ asset('/dist/js/pages/dashboards/dashboard1.min.js')}}"></script>
+            {{ encore_entry_script_tags('app') }}
+
+
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

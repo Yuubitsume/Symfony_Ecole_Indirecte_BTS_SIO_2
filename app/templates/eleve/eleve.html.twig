@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ app.user.userIdentifier }} !{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('html/eleve.css') }}" rel="stylesheet" /> 
+{% endblock %}
+    
+{% block body %}
+    {% include "menu/sidebar_index.html.twig" %}
+    {% include "menu/navbar_index.html.twig" %}
+<div class="row">
+   <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Students Details</h4>
+                    <div class="table-responsive">
+                        <table id="default_order" class="table table-striped table-bordered display no-wrap"
+                         style="width:100%">
+                        <thead>
+                        <tr>
+                         {% for eleve in eleves %}
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th id="th" scope="col">{{ eleve.username }}</th>
+                                    <th id="th" scope="col">{{ eleve.surname }}</th>
+                                    <th id="th" scope="col">{{ eleve.mail }}</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        {% endfor %}
+                        </tr>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+        {% if previous >= 0 %}
+            <a class="previous1" href="{{ path('app_eleve', { offset: previous }) }}">Previous</a>
+        {% endif %}
+        {% if next < eleves|length %}
+            <a class="next1" href="{{ path('app_eleve', { offset: next }) }}">Next</a>
+        {% endif %}  
+{% endblock %}

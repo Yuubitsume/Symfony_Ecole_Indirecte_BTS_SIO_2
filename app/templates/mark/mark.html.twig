@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% if app.user.userIdentifier is defined %}!
+{% endif %}
+{% endblock %}
+
+{% block body %}
+    {% include "menu/navbar_index.html.twig" %}
+    {% include "menu/sidebar_index.html.twig" %}
+    {% include "mark/contain_mark.html.twig" %}
+{% endblock %}

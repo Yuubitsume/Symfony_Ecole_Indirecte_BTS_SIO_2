@@ -1,0 +1,19 @@
+.card{
+    position: absolute;
+    top: 100px;
+    left: 700px;
+    height: 300px;
+    width: 500px;
+}
+
+.previous1{
+    position: absolute;
+    top: 340px;
+    left: 850px;
+}
+
+.next1{
+    position: absolute;
+    top: 340px;
+    right: 900px;
+}

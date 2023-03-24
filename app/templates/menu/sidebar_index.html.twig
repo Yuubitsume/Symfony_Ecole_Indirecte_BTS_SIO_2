@@ -1,0 +1,45 @@
+
+<div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar" data-sidebarbg="skin6">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar" data-sidebarbg="skin6">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{path('app_index')}}"
+                    aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                        class="hide-menu" href="{{path('app_index')}}">Home</span></a></li>
+                    <li class="list-divider"></li>
+                    <li class="list-divider"></li>
+                    <li class="nav-small-cap"><span class="hide-menu">Components</span></li>
+                    <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                            aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                                class="hide-menu">Mark </span></a>
+                        <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <li class="sidebar-item"><a href="{{ path('app_mark') }}" class="sidebar-link"><span
+                                        class="hide-menu"> Mark
+                                    </span></a>
+                            </li>
+                        </ul>
+                    </li>
+                      <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                            aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
+                                class="hide-menu">Tabletime</span></a>
+                        <ul aria-expanded="false" class="collapse first-level base-level-line">
+                            <li class="sidebar-item"><a href="{{ path('app_tabletime') }}" class="sidebar-link"><span
+                                        class="hide-menu">Tabletime
+                                    </span></a>
+                            </li>
+                        </ul>
+                    </li>
+            </nav>
+        </div>
+    </aside>            
+</div>
+        
+    
