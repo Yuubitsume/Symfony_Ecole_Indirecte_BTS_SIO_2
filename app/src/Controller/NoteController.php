@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Matiere;
 use App\Entity\User;
 use App\Entity\NoteControle;
+use App\Entity\Classes;
 use App\Form\NoteFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

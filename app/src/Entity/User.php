@@ -46,6 +46,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: NoteControle::class)]
     private Collection $noteControles;
 
+    #[ORM\ManyToOne(inversedBy: 'classe')]
+    private ?Classes $classe = null;
+
     public function __construct()
     {
         $this->noteControles = new ArrayCollection();
@@ -183,6 +186,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $noteControle->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getClasse(): ?Classes
+    {
+        return $this->classe;
+    }
+
+    public function setClasse(?Classes $classe): self
+    {
+        $this->classe = $classe;
 
         return $this;
     }

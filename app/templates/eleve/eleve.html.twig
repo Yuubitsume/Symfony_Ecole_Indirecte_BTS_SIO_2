@@ -40,6 +40,8 @@
         {% if previous >= 0 %}
             <a class="previous1" href="{{ path('app_eleve', { offset: previous }) }}">Previous</a>
         {% endif %}
+
+        
         {% if next < eleves|length %}
             <a class="next1" href="{{ path('app_eleve', { offset: next }) }}">Next</a>
         {% endif %}  
