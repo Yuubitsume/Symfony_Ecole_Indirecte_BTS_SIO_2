@@ -20,12 +20,17 @@ use Twig\Environment;
 class ClasseController extends AbstractController
 {
     #[Route('/classe', name: 'app_classe')]
-    public function index(Environment $twig, UserRepository $userrepository): Response
+    public function index(Environment $twig, UserRepository $userRepository): Response
     {
+        $users = $userRepository->createQueryBuilder('user')
+            ->leftJoin('user.classe', 'classe')
+            ->orderBy('classe.id', 'ASC')
+            ->getQuery()
+            ->getResult();
+
         return new Response($twig->render('classe/classe.html.twig', [
-            'users' => $userrepository->findAll(),
+            'users' => $users,
         ]));
     }
 }
-
 
