@@ -1,0 +1,21 @@
+{% block body %}
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody> 
+                        <th id="t">Class</th>
+                        <th id="t">Surname</th>
+                        <th id="t">Name</th>
+                        <th id="t">average</th>
+                    {% for user in users %}
+                        <tr>
+                            <td id="th5">{{ user.classe.classeName }}</td>
+                            <td id="th1">{{ user.surname }}</td>
+                            <td id="th2">{{ user.username }}</td>
+                            <td id="th5">{{ moyennes[user.id] }}</td> 
+                        </tr>
+                        {% endfor %}
+                    </tbody>   
+                </table>
+            </div>
+{% endblock %}
+    

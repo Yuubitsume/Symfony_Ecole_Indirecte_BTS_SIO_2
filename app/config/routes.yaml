@@ -9,3 +9,7 @@ kernel:
 authentication_token:
     path: /authentication_token
     methods: ['POST']
+
+app_eleve:
+    path: /eleve/{id}
+    controller: App\Controller\EleveController::index

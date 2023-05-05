@@ -12,11 +12,10 @@
                 {% for note_controle in note_controles %}
                     <tr>
                         <td id="th1">{{ note_controle.user.surname }}</td>
-                        <td id="th2"> <a href="{{ path('app_eleve') }}">{{ note_controle.user.username }}</td>
+                        <td id="th2"><a href="{{ path('app_eleve', { id: note_controle.user.id}) }}">{{ note_controle.user.username }}</td>
                         <td id="th3">{{ note_controle.matiere.libelle}}</td>
                         <td id="th4">{{ note_controle.note}}</td>
                         <td id="th5">{{ note_controle.coefficient}}</td>
-                    </tr>
                 {% endfor %}
             </tbody>   
         </table>
