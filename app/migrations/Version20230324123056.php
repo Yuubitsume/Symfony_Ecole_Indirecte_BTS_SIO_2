@@ -36,7 +36,7 @@ final class Version20230324123056 extends AbstractMigration
         (1, 'DEV'), (2, 'MATH'), (3, 'SVT'), (4, 'Anglais'), (5, 'Base de données'), (6, 'CEJM')");
 
         $this->addSql("INSERT INTO `classes` (`id`, `classe_name`) VALUES
-        (1, 'A'), (2, 'B')");
+        (1, 'A'), (2, 'B'), (3, 'Z')");
 
         $this->addSql("INSERT INTO `user` (`id`, `username`, `roles`, `password`, `surname`, `mail`, `pseudo`, `classe_id` ) VALUES
         (1, 'julien', '[\"ROLE_ADMIN\"]', '\$2y\$13\$yQsaBLZ/uMhxdZ4LNMFofOhIOYdSdkY.KHaA8sY6ELjbsE5v.oV3q', 'perez', 'admin@gmail.com', '', 1),

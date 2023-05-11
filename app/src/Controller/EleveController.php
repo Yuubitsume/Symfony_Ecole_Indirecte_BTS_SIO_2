@@ -60,8 +60,7 @@ class EleveController extends AbstractController
         // Parcours de tous les totaux de notes par matière et calcul de la moyenne
         foreach ($totalNotesByMatiere as $matiereId => $totalNotes) {
             // Récupération de la matière correspondant à l'ID donné
-           $matiere = $noteControleRepository->findOneBy(['matiere.id' => $matiereId])->getMatiere();
-            //$matiere = $noteControleRepository->find($matiereId)->getMatiere();
+            $matiere = $note->getMatiere();
             // Récupération du coefficient correspondant à la matière
             $coefficients = $coefficientsByMatiere[$matiereId];
 

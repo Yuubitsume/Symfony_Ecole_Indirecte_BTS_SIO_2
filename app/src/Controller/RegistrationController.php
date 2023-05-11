@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\Classes;
 use App\Form\RegistrationFormType;
 use App\Security\LoginAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
@@ -20,10 +21,13 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, LoginAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
         $user = new User();
+        $defaultClasse = $entityManager->getRepository(Classes::class)->findOneBy(['classe_name' => 'Z']);
+
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+        
             // encode the plain password
             $user->setPassword(
                 $userPasswordHasher->hashPassword(
@@ -32,6 +36,7 @@ class RegistrationController extends AbstractController
                 )
             );
 
+            $user->setClasse($defaultClasse);
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email

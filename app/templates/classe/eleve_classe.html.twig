@@ -8,9 +8,9 @@
                         <th id="t">mail</th>
                     {% for user in users %}
                         <tr>
-                            <td id="th5">{{ user.classe.classeName }}</td>
+                            <td id="th5"><a href="{{ path('app_moyenne', { id: user.classe.id}) }}">{{ user.classe.classeName }}</td>
                             <td id="th1">{{ user.surname }}</td>
-                            <td id="th2"> <a href="{{ path('app_eleve') }}">{{ user.username }}</td>
+                            <td id="th2">{{ user.username }}</td>
                             <td id="th5">{{ user.mail }}</td> 
                         </tr>
                         {% endfor %}
