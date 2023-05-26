@@ -34,40 +34,43 @@ class EleveController extends AbstractController
         $totalNotesByMatiere = [];
         $coefficientsByMatiere = [];
 
-        // Parcours de toutes les notes et stockage des totaux et des coefficients par matière
+         // Parcours de toutes les notes et stockage des totaux et des coefficients par matière
         foreach ($notes as $note) {
             $matiere = $note->getMatiere();
             $noteValue = $note->getNote();
             $coefficient = $note->getCoefficient();
-
+        
             // Si la matière n'existe pas encore dans les tableaux, on l'ajoute
             if (!array_key_exists($matiere->getId(), $totalNotesByMatiere)) {
                 $totalNotesByMatiere[$matiere->getId()] = 0;
             }
-
+        
             if (!array_key_exists($matiere->getId(), $coefficientsByMatiere)) {
                 $coefficientsByMatiere[$matiere->getId()] = 0;
             }
-
+        
             // Ajout des notes et des coefficients dans les tableaux
             $totalNotesByMatiere[$matiere->getId()] += $noteValue * $coefficient;
             $coefficientsByMatiere[$matiere->getId()] += $coefficient;
         }
+        
 
         // Initialisation d'un tableau pour stocker les moyennes par matière
         $moyennesByMatiere = [];
 
-        // Parcours de tous les totaux de notes par matière et calcul de la moyenne
         foreach ($totalNotesByMatiere as $matiereId => $totalNotes) {
-            // Récupération de la matière correspondant à l'ID donné
+            // Récupération de la note correspondant à la matière et à l'utilisateur donnés
+            $note = $noteControleRepository->findOneBy(['user' => $id, 'matiere' => $matiereId]);
+        
+            if (!$note) {
+                throw $this->createNotFoundException('Note not found');
+            }
+        
             $matiere = $note->getMatiere();
-            // Récupération du coefficient correspondant à la matière
             $coefficients = $coefficientsByMatiere[$matiereId];
-
-            // Calcul de la moyenne de la matière
+        
             $moyenne = ($coefficients > 0) ? ($totalNotes / $coefficients) : "Not Rated";
-
-            // Ajout de la moyenne dans le tableau avec la matière comme clé
+        
             $moyennesByMatiere[$matiere->getId()] = [
                 'libelle' => $matiere->getLibelle(),
                 'moyenne' => $moyenne,
