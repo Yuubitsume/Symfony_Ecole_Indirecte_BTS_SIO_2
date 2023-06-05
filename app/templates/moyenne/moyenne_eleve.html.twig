@@ -1,70 +1,30 @@
-{% block body %}
-            <div class="table-responsive">
-                <table class="table">
-                    <tbody> 
-                        <th id="t">Class</th>
-                        <th id="t">Surname</th>
-                        <th id="t">Name</th>
-                        <th id="t">average</th>
-                    {% for user in users %}
-                        <tr>
-                            <td id="th5">{{ user.classe.classeName }}</td>
-                            <td id="th1">{{ user.surname }}</td>
-                            <td id="th2">{{ user.username }}</td>
-                            <td id="th5">{{ moyennes[user.id] }}</td> 
-                        </tr>
-                        {% endfor %}
-                    </tbody>   
-                </table>
-            </div>
-{% endblock %}
-    
-
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ app.user.username }} !{% endblock %}
+{% block title %}Average Grades{% endblock %}
 
-{% block stylesheets %}
-    <link href="{{ asset('html/eleve.css') }}" rel="stylesheet" /> 
-{% endblock %}
-    
 {% block body %}
-    {% include "menu/sidebar_index.html.twig" %}
-    {% include "menu/navbar_index.html.twig" %}
-<div class="row">
-   <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">{{ eleve.username }} {{ eleve.surname }} - Students Averages Details</h4>
-                    <div class="table-responsive">
-                        <table id="default_order" class="table table-striped table-bordered display no-wrap"
-                         style="width:100%">
-                        <thead>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
                         <tr>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th id="th" scope="col">Average per Topic</th>  
-                                </tr>
-                            </thead>
-                            <tbody> 
-                        <th id="t">Class</th>
-                        <th id="t">Surname</th>
-                        <th id="t">Name</th>
-                        <th id="t">average</th>
-                    {% for user in users %}
-                        <tr>
-                            <td id="th5">{{ user.classe.classeName }}</td>
-                            <td id="th1">{{ user.surname }}</td>
-                            <td id="th2">{{ user.username }}</td>
-                            <td id="th5">{{ moyennes[user.id] }}</td> 
+                            <th>Class</th>
+                            <th>Matiere</th>
+                            <th>Average</th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        {% for moyenne in moyennes %}
+                            <tr>
+                                <td>{{ classe.classeName }}</td>
+                                <td>{{ moyenne.libelle }}</td>
+                                <td>{{ moyenne.moyenne }}</td>
+                            </tr>
                         {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}

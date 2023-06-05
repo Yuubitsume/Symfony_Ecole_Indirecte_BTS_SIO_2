@@ -41,14 +41,11 @@ final class Version20230324123056 extends AbstractMigration
         $this->addSql("INSERT INTO `user` (`id`, `username`, `roles`, `password`, `surname`, `mail`, `pseudo`, `classe_id` ) VALUES
         (1, 'julien', '[\"ROLE_ADMIN\"]', '\$2y\$13\$yQsaBLZ/uMhxdZ4LNMFofOhIOYdSdkY.KHaA8sY6ELjbsE5v.oV3q', 'perez', 'admin@gmail.com', '', 1),
         (2, 'patrick', '[\"ROLE_ADMIN\"]', '\$2y\$13\$t6X74m9xmMZV3ZODf0EnRuxZb2LD/vbOnXghNfV6SBq12hOtUwRn.', 'patrick', 'patrick@gmail.com', '', 2),
-        (3, 'michel', '[]', '\$2y\$13\$XyD73Eq6lxzgNbYF.pKEPeT/02Cp5NcmGmiNi2PXZmOcuRN.T3fYq', 'dupont', 'michel@gmail.com', '', 2),
         (4, 'Xavier', '[]', '\$2y\$13\$HH..7/gZMtEe..JQgfB9H.pnsGvGQ4PhABCW9GVWhz363dIk7OtTe', 'plaitil', 'xavier.plaitil@gmail.com', '', 2),
         (5, 'Albert', '[]', '\$2y\$13\$EUP8JCX0jh4H1K4X0WujPuRLI9QgTlmvdo/J22pMbRwYrWujlIzrO', 'Simon', 'Albert.Simon@gmail.com', '', 1),
         (6, 'Vigile', '[]', '\$2y\$13\$d36LXahJsQeOiCLDzMULuefHjYYjHgoMFWdTNkzy6u.m86ZVfEWGq', 'class', 'vigile.class@gmail.com', '', 2),
         (7, 'Flick', '[]', '\$2y\$13\$F8.a9HOeEkwym18m.Oo2ducENoQfz3svRN6VQ8wmUKujdEhlxUJsO', 'Rl', 'flick.RL@gmail.com', '', 2),
-        (8, 'oui', '[]', '\$2y\$13\$Sp4e/Hyq0nd/haa2Lz5JkeadJWeA2fEkzdav5msLCjnAAKi5iryQi', 'non', 'michel2@gmail.com', '', 1),
         (9, 'Lizard', '[]', '\$2y\$13\$ibdWua5TRbnC3taeIucp6OUIMZjxG6xVvfqCEzhhqnUW6Jm9Q1gke', 'Fly', 'michel34@gmail.com', '', 2),
-        (13, 'Lizard2', '[]', '\$2y\$13\$1iw5OcahdY0n0ihccPjRhuNxzYaWo6chjMn9EZ79siDG6Nf6y.lTW', 'gggg', 'michel88@gmail.com', 'lllll', 1),
         (14, 'oui4', '[]', '\$2y\$13\$89zVkNEvmdCx0R1MGgkLbu87Q//dxduCZHYkPjJH4L2kGzuZVrhya', 'hgdfhd', 'michel89@gmail.com', 'dfgdgffdh', 1),
         (15, 'yanis', '[]', '\$2y\$13\$s1AipgC4yXivxn13Akd6jOyBRdT2KjzBuRH2zqo/2LSv0yvknqge2', 'yanis2', 'yanis@gmail.com', 'yanis3', 1)");
         
